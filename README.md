@@ -319,6 +319,38 @@ For documentation on the latest development code see the [documentation index][d
 * [uwsgi](./plugins/inputs/uwsgi)
 * [varnish](./plugins/inputs/varnish)
 * [vsphere](./plugins/inputs/vsphere) VMware vSphere
+* [zfs](./plugins/inputs/zfs)
+* [zookeeper](./plugins/inputs/zookeeper)
+* [win_perf_counters](./plugins/inputs/win_perf_counters) (windows performance counters)
+* [win_services](./plugins/inputs/win_services)
+* [webapi](./plugins/inputs/webapi)
+* [sysstat](./plugins/inputs/sysstat)
+* [system](./plugins/inputs/system)
+    * cpu
+    * mem
+    * net
+    * netstat
+    * disk
+    * diskio
+    * swap
+    * processes
+    * kernel (/proc/stat)
+    * kernel (/proc/vmstat)
+    * linux_sysctl_fs (/proc/sys/fs)
+
+Telegraf can also collect metrics via the following service plugins:
+
+* [http_listener](./plugins/inputs/http_listener)
+* [kafka_consumer](./plugins/inputs/kafka_consumer)
+* [mqtt_consumer](./plugins/inputs/mqtt_consumer)
+* [nats_consumer](./plugins/inputs/nats_consumer)
+* [nsq_consumer](./plugins/inputs/nsq_consumer)
+* [logparser](./plugins/inputs/logparser)
+* [statsd](./plugins/inputs/statsd)
+* [socket_listener](./plugins/inputs/socket_listener)
+* [tail](./plugins/inputs/tail)
+* [tcp_listener](./plugins/inputs/socket_listener)
+* [udp_listener](./plugins/inputs/socket_listener)
 * [webhooks](./plugins/inputs/webhooks)
   * [filestack](./plugins/inputs/webhooks/filestack)
   * [github](./plugins/inputs/webhooks/github)

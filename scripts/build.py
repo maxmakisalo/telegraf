@@ -156,7 +156,7 @@ def go_get(branch, update=False, no_uncommitted=False):
         logging.error("There are uncommitted changes in the current directory.")
         return False
     logging.info("Retrieving dependencies with `dep`...")
-    run("{}/bin/dep ensure -v -vendor-only".format(os.environ.get("GOPATH",
+    run("dep ensure -v -vendor-only".format(os.environ.get("GOPATH",
         os.path.expanduser("~/go"))))
     return True
 

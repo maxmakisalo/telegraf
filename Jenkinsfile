@@ -31,9 +31,9 @@ pipeline
 						], 
 						doGenerateSubmoduleConfigurations: false, extensions: 
 						[
-							[$class: 'PreBuildMerge', options: [fastForwardMode: 'NO_FF', mergeRemote: 'origin', mergeTarget: 'HuaweiHilinkApi']], 
-							[$class: 'PreBuildMerge', options: [fastForwardMode: 'NO_FF', mergeRemote: 'origin', mergeTarget: 'OpenHardwareMonitor']],
-							[$class: 'PreBuildMerge', options: [fastForwardMode: 'NO_FF', mergeRemote: 'origin', mergeTarget: 'WebApi']]
+							[$class: 'PreBuildMerge', options: [fastForwardMode: 'NO_FF', mergeStrategy: 'default', mergeRemote: 'origin', mergeTarget: 'HuaweiHilinkApi']], 
+							[$class: 'PreBuildMerge', options: [fastForwardMode: 'NO_FF', mergeStrategy: 'default', mergeRemote: 'origin', mergeTarget: 'OpenHardwareMonitor']],
+							[$class: 'PreBuildMerge', options: [fastForwardMode: 'NO_FF', mergeStrategy: 'default', mergeRemote: 'origin', mergeTarget: 'WebApi']]
 						], 
 						submoduleCfg: [], userRemoteConfigs: 
 						[

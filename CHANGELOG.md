@@ -4,6 +4,7 @@
 
 - [cloud_pubsub](/plugins/inputs/cloud_pubsub/README.md) - Contributed by @emilymye
 - [neptune_apex](/plugins/inputs/neptune_apex/README.md) - Contributed by @MaxRenaud
+- [nginx_upstream_check](/plugins/inputs/nginx_upstream_check/README.md) - Contributed by @dmitryilyin
 
 #### New Outputs
 
@@ -30,6 +31,10 @@
 - [#5113](https://github.com/influxdata/telegraf/pull/5113): Improve scalability of vsphere input.
 - [#5210](https://github.com/influxdata/telegraf/pull/5210): Add read and write op per second fields to ceph input.
 - [#5214](https://github.com/influxdata/telegraf/pull/5214): Add configurable timeout to varnish input.
+- [#5273](https://github.com/influxdata/telegraf/pull/5273): Add flush_total_time_ns and additional wired tiger fields to mongodb input.
+- [#5295](https://github.com/influxdata/telegraf/pull/5295): Support passing bearer token directly in k8s input.
+- [#5294](https://github.com/influxdata/telegraf/pull/5294): Support passing bearer token directly in prometheus input.
+- [#5292](https://github.com/influxdata/telegraf/pull/5292): Add option to report input timestamp in prometheus output.
 
 #### Bugfixes
 
@@ -40,6 +45,9 @@
 #### Bugfixes
 
 - [#5261](https://github.com/influxdata/telegraf/pull/5261):  Fix arithmetic overflow in sqlserver input.
+- [#5194](https://github.com/influxdata/telegraf/issues/5194): Fix latest metrics not sent first when output fails.
+- [#5285](https://github.com/influxdata/telegraf/issues/5285): Fix amqp_consumer stops consuming when it receives unparsable messages.
+- [#5281](https://github.com/influxdata/telegraf/issues/5281): Fix prometheus input not detecting added and removed pods.
 
 ## v1.9.2 [2019-01-08]
 

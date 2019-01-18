@@ -132,7 +132,7 @@
 
 [[constraint]]
   name = "github.com/prometheus/client_golang"
-  version = "0.8.0"
+  version = "0.9.2"
 
 [[constraint]]
   name = "github.com/prometheus/client_model"
@@ -148,7 +148,7 @@
 
 [[constraint]]
   name = "github.com/shirou/gopsutil"
-  version = "2.18.07"
+  version = "2.18.12"
 
 [[constraint]]
   name = "github.com/Shopify/sarama"

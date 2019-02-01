@@ -14,6 +14,7 @@
 #### New Serializers
 
 - [nowmetric](/plugins/serializers/nowmetric/README.md) - Contributed by @JefMuller
+- [carbon2](/plugins/serializers/carbon2/README.md) - Contributed by @frankreno
 
 #### Features
 
@@ -41,6 +42,7 @@
 
 - [#4610](https://github.com/influxdata/telegraf/pull/4610): Fix initscript removes pidfile of restarted Telegraf process.
 - [#5320](https://github.com/influxdata/telegraf/pull/5320): Use datacenter option spelling in consul input.
+- [#5316](https://github.com/influxdata/telegraf/pull/5316): Remove auth from /ping route in influxdb_listener.
 
 ## v1.9.4 [unreleased]
 
@@ -48,6 +50,7 @@
 
 - [#5334](https://github.com/influxdata/telegraf/issues/5334): Fix skip_rows and skip_columns options in csv parser.
 - [#5181](https://github.com/influxdata/telegraf/issues/5181): Always send basic auth in jenkins input.
+- [#5346](https://github.com/influxdata/telegraf/pull/5346): Build official packages with Go 1.11.5.
 
 ## v1.9.3 [2019-01-22]
 

@@ -3,6 +3,7 @@
 #### New Inputs
 
 - [cloud_pubsub](/plugins/inputs/cloud_pubsub/README.md) - Contributed by @emilymye
+- [kube_inventory](/plugins/inputs/kube_inventory/README.md) - Contributed by @influxdata
 - [neptune_apex](/plugins/inputs/neptune_apex/README.md) - Contributed by @MaxRenaud
 - [nginx_upstream_check](/plugins/inputs/nginx_upstream_check/README.md) - Contributed by @dmitryilyin
 - [multifile](/plugins/inputs/multifile/README.md) - Contributed by @martin2250
@@ -37,20 +38,26 @@
 - [#5295](https://github.com/influxdata/telegraf/pull/5295): Support passing bearer token directly in k8s input.
 - [#5294](https://github.com/influxdata/telegraf/pull/5294): Support passing bearer token directly in prometheus input.
 - [#5292](https://github.com/influxdata/telegraf/pull/5292): Add option to report input timestamp in prometheus output.
+- [#5234](https://github.com/influxdata/telegraf/pull/5234): Add Linux mipsle packages.
+- [#5382](https://github.com/influxdata/telegraf/pull/5382): Support unix_us and unix_ns timestamp format in csv parser.
 
 #### Bugfixes
 
 - [#4610](https://github.com/influxdata/telegraf/pull/4610): Fix initscript removes pidfile of restarted Telegraf process.
 - [#5320](https://github.com/influxdata/telegraf/pull/5320): Use datacenter option spelling in consul input.
 - [#5316](https://github.com/influxdata/telegraf/pull/5316): Remove auth from /ping route in influxdb_listener.
+- [#5304](https://github.com/influxdata/telegraf/issues/5304): Fix x509_cert input stops checking certs after first error.
+- [#5315](https://github.com/influxdata/telegraf/issues/5315): Skip string fields when writing to stackdriver output.
+- [#5364](https://github.com/influxdata/telegraf/issues/5364): Send metrics in ascending time order in stackdriver output.
 
-## v1.9.4 [unreleased]
+## v1.9.4 [2019-02-05]
 
 #### Bugfixes
 
 - [#5334](https://github.com/influxdata/telegraf/issues/5334): Fix skip_rows and skip_columns options in csv parser.
 - [#5181](https://github.com/influxdata/telegraf/issues/5181): Always send basic auth in jenkins input.
 - [#5346](https://github.com/influxdata/telegraf/pull/5346): Build official packages with Go 1.11.5.
+- [#5368](https://github.com/influxdata/telegraf/issues/5368): Fix definition of multiple syslog plugins.
 
 ## v1.9.3 [2019-01-22]
 

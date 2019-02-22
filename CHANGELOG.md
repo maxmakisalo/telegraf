@@ -7,6 +7,7 @@
 - [neptune_apex](/plugins/inputs/neptune_apex/README.md) - Contributed by @MaxRenaud
 - [nginx_upstream_check](/plugins/inputs/nginx_upstream_check/README.md) - Contributed by @dmitryilyin
 - [multifile](/plugins/inputs/multifile/README.md) - Contributed by @martin2250
+- [stackdriver](/plugins/inputs/stackdriver/README.md) - Contributed by @WuHan0608
 
 #### New Outputs
 
@@ -45,6 +46,7 @@
 - [#4892](https://github.com/influxdata/telegraf/pull/4892): Add option to set retain flag on messages to mqtt output.
 - [#5165](https://github.com/influxdata/telegraf/pull/5165): Add resource path based filtering to vsphere input.
 - [#5417](https://github.com/influxdata/telegraf/pull/5417): Add rcode tag and field to dns_query input.
+- [#5453](https://github.com/influxdata/telegraf/pull/5453): Support Azure Sovereign Environments with endpoint_url option.
 
 #### Bugfixes
 
@@ -52,11 +54,19 @@
 - [#5320](https://github.com/influxdata/telegraf/pull/5320): Use datacenter option spelling in consul input.
 - [#5316](https://github.com/influxdata/telegraf/pull/5316): Remove auth from /ping route in influxdb_listener.
 - [#5304](https://github.com/influxdata/telegraf/issues/5304): Fix x509_cert input stops checking certs after first error.
+- [#5404](https://github.com/influxdata/telegraf/issues/5404): Group stackdriver requests to send one point per timeseries.
+
+## v1.9.5 [unreleased]
+
+#### Bugfixes
+
 - [#5315](https://github.com/influxdata/telegraf/issues/5315): Skip string fields when writing to stackdriver output.
 - [#5364](https://github.com/influxdata/telegraf/issues/5364): Send metrics in ascending time order in stackdriver output.
 - [#5117](https://github.com/influxdata/telegraf/issues/5117): Use systemd in Amazon Linux 2 rpm.
 - [#4988](https://github.com/influxdata/telegraf/issues/4988): Set deadlock priority in sqlserver input.
 - [#5403](https://github.com/influxdata/telegraf/issues/5403): Remove error log when snmp6 directory does not exists with nstat input.
+- [#5437](https://github.com/influxdata/telegraf/issues/5437): Host not added when using custom arguments in ping plugin.
+- [#5438](https://github.com/influxdata/telegraf/issues/5438): Fix InfluxDB output UDP line splitting.
 
 ## v1.9.4 [2019-02-05]
 

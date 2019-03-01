@@ -146,6 +146,7 @@ For documentation on the latest development code see the [documentation index][d
 * [cgroup](./plugins/inputs/cgroup)
 * [chrony](./plugins/inputs/chrony)
 * [cloud_pubsub](./plugins/inputs/cloud_pubsub) Google Cloud Pub/Sub
+* [cloud_pubsub_push](./plugins/inputs/cloud_pubsub_push) Google Cloud Pub/Sub push endpoint
 * [conntrack](./plugins/inputs/conntrack)
 * [consul](./plugins/inputs/consul)
 * [couchbase](./plugins/inputs/couchbase)
@@ -190,6 +191,7 @@ For documentation on the latest development code see the [documentation index][d
 * [jti_openconfig_telemetry](./plugins/inputs/jti_openconfig_telemetry)
 * [kafka_consumer](./plugins/inputs/kafka_consumer)
 * [kapacitor](./plugins/inputs/kapacitor)
+* [kinesis](./plugins/inputs/kinesis_consumer)
 * [kernel](./plugins/inputs/kernel)
 * [kernel_vmstat](./plugins/inputs/kernel_vmstat)
 * [kibana](./plugins/inputs/kibana)

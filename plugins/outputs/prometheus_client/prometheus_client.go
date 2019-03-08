@@ -3,6 +3,7 @@ package prometheus_client
 import (
 	"context"
 	"crypto/subtle"
+	"crypto/tls"
 	"fmt"
 	"log"
 	"net"
@@ -16,7 +17,7 @@ import (
 
 	"github.com/influxdata/telegraf"
 	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/internal/tls"
+	tlsint "github.com/influxdata/telegraf/internal/tls"
 	"github.com/influxdata/telegraf/plugins/outputs"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
@@ -66,7 +67,7 @@ type PrometheusClient struct {
 	StringAsLabel      bool              `toml:"string_as_label"`
 	ExportTimestamp    bool              `toml:"export_timestamp"`
 
-	tls.ServerConfig
+	tlsint.ServerConfig
 
 	server *http.Server
 
@@ -175,7 +176,10 @@ func (p *PrometheusClient) Connect() error {
 		}
 	}
 
-	registry.Register(p)
+	err := registry.Register(p)
+	if err != nil {
+		return err
+	}
 
 	if p.Listen == "" {
 		p.Listen = "localhost:9273"
@@ -199,13 +203,18 @@ func (p *PrometheusClient) Connect() error {
 		TLSConfig: tlsConfig,
 	}
 
+	var listener net.Listener
+	if tlsConfig != nil {
+		listener, err = tls.Listen("tcp", p.Listen, tlsConfig)
+	} else {
+		listener, err = net.Listen("tcp", p.Listen)
+	}
+	if err != nil {
+		return err
+	}
+
 	go func() {
-		var err error
-		if p.TLSCert != "" && p.TLSKey != "" {
-			err = p.server.ListenAndServeTLS("", "")
-		} else {
-			err = p.server.ListenAndServe()
-		}
+		err := p.server.Serve(listener)
 		if err != nil && err != http.ErrServerClosed {
 			log.Printf("E! Error creating prometheus metric endpoint, err: %s\n",
 				err.Error())
@@ -295,6 +304,7 @@ func (p *PrometheusClient) Collect(ch chan<- prometheus.Metric) {
 				log.Printf("E! Error creating prometheus metric, "+
 					"key: %s, labels: %v,\nerr: %s\n",
 					name, labels, err.Error())
+				continue
 			}
 
 			if p.ExportTimestamp {
@@ -354,13 +364,27 @@ func (p *PrometheusClient) addMetricFamily(point telegraf.Metric, sample *Sample
 	addSample(fam, sample, sampleID)
 }
 
+// Sorted returns a copy of the metrics in time ascending order.  A copy is
+// made to avoid modifying the input metric slice since doing so is not
+// allowed.
+func sorted(metrics []telegraf.Metric) []telegraf.Metric {
+	batch := make([]telegraf.Metric, 0, len(metrics))
+	for i := len(metrics) - 1; i >= 0; i-- {
+		batch = append(batch, metrics[i])
+	}
+	sort.Slice(batch, func(i, j int) bool {
+		return batch[i].Time().Before(batch[j].Time())
+	})
+	return batch
+}
+
 func (p *PrometheusClient) Write(metrics []telegraf.Metric) error {
 	p.Lock()
 	defer p.Unlock()
 
 	now := p.now()
 
-	for _, point := range metrics {
+	for _, point := range sorted(metrics) {
 		tags := point.Tags()
 		sampleID := CreateSampleID(tags)
 

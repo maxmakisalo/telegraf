@@ -4,13 +4,32 @@
 
 - [#5556](https://github.com/influxdata/telegraf/pull/5556): Add TTL field to ping input.
 - [#5569](https://github.com/influxdata/telegraf/pull/5569): Add hexadecimal string to integer conversion to converter processor.
+- [#5601](https://github.com/influxdata/telegraf/pull/5601): Add support for multiple line text and perfdata to nagios parser.
+
+#### Bugfixes
+
+- [#5631](https://github.com/influxdata/telegraf/pull/5631): Create Windows service only when specified or in service manager.
 
 ## v1.10.2 [unreleased]
+
+#### Release Notes
+
+- String fields no longer have leading and trailing quotating marks removed in
+  the grok parser.  If you are capturing quoted strings you may need to update
+  the patterns.
 
 #### Bugfixes
 
 - [#5612](https://github.com/influxdata/telegraf/pull/5612): Fix deadlock when Telegraf is aligning aggregators.
 - [#5523](https://github.com/influxdata/telegraf/issues/5523): Fix missing cluster stats in ceph input.
+- [#5566](https://github.com/influxdata/telegraf/pull/5566): Fix reading major and minor block devices identifiers in diskio input.
+- [#5607](https://github.com/influxdata/telegraf/pull/5607): Add owned directories to rpm package spec.
+- [#5608](https://github.com/influxdata/telegraf/pull/5607): Fix last character removed from string field in grok parser.
+- [#5632](https://github.com/influxdata/telegraf/pull/5632): Fix drop tracking of metrics removed with aggregator drop_original.
+- [#5540](https://github.com/influxdata/telegraf/pull/5540): Fix open file error handling in file output.
+- [#5627](https://github.com/influxdata/telegraf/pull/5627): Fix plugin name in influxdb_v2 output logging.
+- [#5630](https://github.com/influxdata/telegraf/pull/5630): Fix basedir check and parent dir extraction in filecount input.
+- [#5628](https://github.com/influxdata/telegraf/pull/5628): Listen before leaving start in statsd.
 
 ## v1.10.1 [2019-03-19]
 

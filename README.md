@@ -16,6 +16,10 @@ Telegraf is plugin-driven and has the concept of 4 distinct plugin types:
 New plugins are designed to be easy to contribute, we'll eagerly accept pull
 requests and will manage the set of plugins that Telegraf supports.
 
+## Try in Browser :rocket:
+
+You can try Telegraf right in your browser in the [Telegraf playground](https://rootnroll.com/d/telegraf/).
+
 ## Contributing
 
 There are many ways to contribute:
@@ -240,6 +244,7 @@ For documentation on the latest development code see the [documentation index][d
 * [postgresql_extensible](./plugins/inputs/postgresql_extensible)
 * [postgresql](./plugins/inputs/postgresql)
 * [powerdns](./plugins/inputs/powerdns)
+* [powerdns_recursor](./plugins/inputs/powerdns_recursor)
 * [processes](./plugins/inputs/processes)
 * [procstat](./plugins/inputs/procstat)
 * [prometheus](./plugins/inputs/prometheus) (can be used for [Caddy server](./plugins/inputs/prometheus/README.md#usage-for-caddy-http-server))

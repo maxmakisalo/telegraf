@@ -9,6 +9,7 @@
 
 - [bind](/plugins/inputs/bind/README.md) - Contributed by @dswarbrick & @danielllek
 - [github](/plugins/inputs/github/README.md) - Contributed by @influxdata
+- [powerdns_recursor](/plugins/inputs/powerdns_recursor/README.md) - Contributed by @dupondje
 
 #### New Serializers
 
@@ -26,11 +27,22 @@
 - [#5681](https://github.com/influxdata/telegraf/pull/5681): Add cmdline tag to procstat input.
 - [#5704](https://github.com/influxdata/telegraf/pull/5704): Support verbose query param in ping endpoint of influxdb_listener.
 - [#5713](https://github.com/influxdata/telegraf/pull/5713): Enhance HTTP connection options for phpfpm input plugin.
+- [#5544](https://github.com/influxdata/telegraf/pull/5544): Use more efficient GetMetricData API to collect cloudwatch metrics.
+- [#5544](https://github.com/influxdata/telegraf/pull/5544): Allow selection of collected statistic types in cloudwatch input.
+- [#5757](https://github.com/influxdata/telegraf/pull/5757): Speed up interface stat collection in net input.
+- [#5769](https://github.com/influxdata/telegraf/pull/5769): Add pagefault data to procstat input plugin.
 
 #### Bugfixes
 
 - [#5631](https://github.com/influxdata/telegraf/pull/5631): Create Windows service only when specified or in service manager.
 - [#5730](https://github.com/influxdata/telegraf/pull/5730): Don't start telegraf when stale pidfile found.
+- [#5477](https://github.com/influxdata/telegraf/pull/5477): Support Minecraft server 1.13 and newer in minecraft input.
+
+## v1.10.4 [unreleased]
+
+#### Bugfixes
+
+- [#5764](https://github.com/influxdata/telegraf/pull/5764): Fix race condition in the Wavefront parser.
 
 ## v1.10.3 [2019-04-16]
 

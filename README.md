@@ -150,6 +150,8 @@ For documentation on the latest development code see the [documentation index][d
 * [ceph](./plugins/inputs/ceph)
 * [cgroup](./plugins/inputs/cgroup)
 * [chrony](./plugins/inputs/chrony)
+* [cisco_telemetry_gnmi](./plugins/inputs/cisco_telemetry_gnmi)
+* [cisco_telemetry_mdt](./plugins/inputs/cisco_telemetry_mdt)
 * [cloud_pubsub](./plugins/inputs/cloud_pubsub) Google Cloud Pub/Sub
 * [cloud_pubsub_push](./plugins/inputs/cloud_pubsub_push) Google Cloud Pub/Sub push endpoint
 * [conntrack](./plugins/inputs/conntrack)
@@ -236,6 +238,7 @@ For documentation on the latest development code see the [documentation index][d
 * [nvidia_smi](./plugins/inputs/nvidia_smi)
 * [openldap](./plugins/inputs/openldap)
 * [opensmtpd](./plugins/inputs/opensmtpd)
+* [openweathermap](./plugins/inputs/openweathermap)
 * [pf](./plugins/inputs/pf)
 * [pgbouncer](./plugins/inputs/pgbouncer)
 * [phpfpm](./plugins/inputs/phpfpm)
@@ -357,6 +360,7 @@ For documentation on the latest development code see the [documentation index][d
 * [file](./plugins/outputs/file)
 * [graphite](./plugins/outputs/graphite)
 * [graylog](./plugins/outputs/graylog)
+* [health](./plugins/outputs/health)
 * [http](./plugins/outputs/http)
 * [instrumental](./plugins/outputs/instrumental)
 * [kafka](./plugins/outputs/kafka)

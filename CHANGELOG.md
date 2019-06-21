@@ -1,12 +1,43 @@
-## v1.11.1 [unreleased]
+## v1.12 [unreleased]
+
+#### New Inputs
+
+- [docker_log](/plugins/inputs/docker_log) - Contributed by @prashanthjbabu
+
+#### New Parsers
+
+- [form_urlencoded](/plugins/processors/form_urlencoded/README.md) - Contributed by @byonchev
+
+#### New Processors
+
+- [date](/plugins/processors/date/README.md) - Contributed by @influxdata
+- [pivot](/plugins/processors/pivot/README.md) - Contributed by @influxdata
+- [unpivot](/plugins/processors/unpivot/README.md) - Contributed by @influxdata
 
 #### Features
 
 - [#5842](https://github.com/influxdata/telegraf/pull/5842): Improve performance of wavefront serializer.
+- [#5863](https://github.com/influxdata/telegraf/pull/5863): Allow regex processor to append tag values.
+- [#5997](https://github.com/influxdata/telegraf/pull/5997): Add starttime field to phpfpm input.
+- [#5998](https://github.com/influxdata/telegraf/pull/5998): Add cluster name tag to elasticsearch indices.
+- [#6006](https://github.com/influxdata/telegraf/pull/6006): Add support for interface field in http_response input plugin.
+- [#5996](https://github.com/influxdata/telegraf/pull/5996): Add container uptime_ns in docker input plugin.
+- [#6016](https://github.com/influxdata/telegraf/pull/6016): Add better user-facing errors for API timeouts in docker input.
+
+#### Bugfixes
+
+- [#5692](https://github.com/influxdata/telegraf/issues/5692): Fix sensor read error stops reporting of all sensors in temp input.
+- [#4356](https://github.com/influxdata/telegraf/issues/4356): Fix double pct replacement in sysstat input.
+
+## v1.11.1 [unreleased]
 
 #### Bugfixes
 
 - [#5980](https://github.com/influxdata/telegraf/issues/5980): Cannot set mount_points option in disk input.
+- [#5983](https://github.com/influxdata/telegraf/issues/5983): Omit keys when creating measurement names for GNMI telemetry.
+- [#5972](https://github.com/influxdata/telegraf/issues/5972): Don't consider pid of 0 when using systemd lookup in procstat.
+- [#5807](https://github.com/influxdata/telegraf/issues/5807): Skip 404 error reporting in nginx_plus_api input.
+- [#5999](https://github.com/influxdata/telegraf/issues/5999): Fix panic if pool_mode column does not exist.
 
 ## v1.11 [2019-06-11]
 
@@ -75,6 +106,7 @@
 
 #### Bugfixes
 
+- [#5692](https://github.com/influxdata/telegraf/pull/5692): Temperature input plugin stops working when WiFi is turned off.
 - [#5631](https://github.com/influxdata/telegraf/pull/5631): Create Windows service only when specified or in service manager.
 - [#5730](https://github.com/influxdata/telegraf/pull/5730): Don't start telegraf when stale pidfile found.
 - [#5477](https://github.com/influxdata/telegraf/pull/5477): Support Minecraft server 1.13 and newer in minecraft input.

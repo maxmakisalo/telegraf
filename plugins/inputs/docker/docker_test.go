@@ -543,12 +543,13 @@ func TestContainerStatus(t *testing.T) {
 		// tags
 		Status string
 		// fields
-		OOMKilled  bool
-		Pid        int
-		ExitCode   int
-		StartedAt  time.Time
-		FinishedAt time.Time
-		UptimeNs   int64
+		ContainerID string
+		OOMKilled   bool
+		Pid         int
+		ExitCode    int
+		StartedAt   time.Time
+		FinishedAt  time.Time
+		UptimeNs    int64
 	}
 
 	var tests = []struct {
@@ -564,12 +565,13 @@ func TestContainerStatus(t *testing.T) {
 			},
 			inspect: containerInspect(),
 			expect: expectation{
-				Status:    "running",
-				OOMKilled: false,
-				Pid:       1234,
-				ExitCode:  0,
-				StartedAt: time.Date(2018, 6, 14, 5, 48, 53, 266176036, time.UTC),
-				UptimeNs:  int64(3 * time.Minute),
+				ContainerID: "e2173b9478a6ae55e237d4d74f8bbb753f0817192b5081334dc78476296b7dfb",
+				Status:      "running",
+				OOMKilled:   false,
+				Pid:         1234,
+				ExitCode:    0,
+				StartedAt:   time.Date(2018, 6, 14, 5, 48, 53, 266176036, time.UTC),
+				UptimeNs:    int64(3 * time.Minute),
 			},
 		},
 		{
@@ -580,13 +582,14 @@ func TestContainerStatus(t *testing.T) {
 				return i
 			}(),
 			expect: expectation{
-				Status:     "running",
-				OOMKilled:  false,
-				Pid:        1234,
-				ExitCode:   0,
-				StartedAt:  time.Date(2018, 6, 14, 5, 48, 53, 266176036, time.UTC),
-				FinishedAt: time.Date(2018, 6, 14, 5, 53, 53, 266176036, time.UTC),
-				UptimeNs:   int64(5 * time.Minute),
+				ContainerID: "e2173b9478a6ae55e237d4d74f8bbb753f0817192b5081334dc78476296b7dfb",
+				Status:      "running",
+				OOMKilled:   false,
+				Pid:         1234,
+				ExitCode:    0,
+				StartedAt:   time.Date(2018, 6, 14, 5, 48, 53, 266176036, time.UTC),
+				FinishedAt:  time.Date(2018, 6, 14, 5, 53, 53, 266176036, time.UTC),
+				UptimeNs:    int64(5 * time.Minute),
 			},
 		},
 		{
@@ -598,11 +601,12 @@ func TestContainerStatus(t *testing.T) {
 				return i
 			}(),
 			expect: expectation{
-				Status:     "running",
-				OOMKilled:  false,
-				Pid:        1234,
-				ExitCode:   0,
-				FinishedAt: time.Date(2018, 6, 14, 5, 53, 53, 266176036, time.UTC),
+				ContainerID: "e2173b9478a6ae55e237d4d74f8bbb753f0817192b5081334dc78476296b7dfb",
+				Status:      "running",
+				OOMKilled:   false,
+				Pid:         1234,
+				ExitCode:    0,
+				FinishedAt:  time.Date(2018, 6, 14, 5, 53, 53, 266176036, time.UTC),
 			},
 		},
 	}
@@ -636,9 +640,10 @@ func TestContainerStatus(t *testing.T) {
 			require.NoError(t, err)
 
 			fields := map[string]interface{}{
-				"oomkilled": tt.expect.OOMKilled,
-				"pid":       tt.expect.Pid,
-				"exitcode":  tt.expect.ExitCode,
+				"oomkilled":    tt.expect.OOMKilled,
+				"pid":          tt.expect.Pid,
+				"exitcode":     tt.expect.ExitCode,
+				"container_id": tt.expect.ContainerID,
 			}
 
 			if started := tt.expect.StartedAt; !started.IsZero() {

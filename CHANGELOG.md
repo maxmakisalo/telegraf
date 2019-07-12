@@ -31,9 +31,12 @@
 - [#5996](https://github.com/influxdata/telegraf/pull/5996): Add container uptime_ns in docker input plugin.
 - [#6016](https://github.com/influxdata/telegraf/pull/6016): Add better user-facing errors for API timeouts in docker input.
 - [#6027](https://github.com/influxdata/telegraf/pull/6027): Add TLS mutal auth support to jti_openconfig_telemetry input.
-- [#6053](https://github.com/influxdata/telegraf/pull/6053): Add support for ES 7.x to elasticsearch output
-- [#6062](https://github.com/influxdata/telegraf/pull/6062): Add basic auth to prometheus input plugin
-- [#6064](https://github.com/influxdata/telegraf/pull/6064): Add node roles tag to elasticsearch input
+- [#6053](https://github.com/influxdata/telegraf/pull/6053): Add support for ES 7.x to elasticsearch output.
+- [#6062](https://github.com/influxdata/telegraf/pull/6062): Add basic auth to prometheus input plugin.
+- [#6064](https://github.com/influxdata/telegraf/pull/6064): Add node roles tag to elasticsearch input.
+- [#5572](https://github.com/influxdata/telegraf/pull/5572): Support floats in statsd percentiles.
+- [#6050](https://github.com/influxdata/telegraf/pull/6050): Add native Go ping method to ping input plugin.
+- [#6074](https://github.com/influxdata/telegraf/pull/6074): Resume from last known offset in tail inputwhen reloading Telegraf.
 
 #### Bugfixes
 
@@ -41,12 +44,23 @@
 - [#4356](https://github.com/influxdata/telegraf/issues/4356): Fix double pct replacement in sysstat input.
 - [#6004](https://github.com/influxdata/telegraf/issues/6004): Fix race in master node detection in elasticsearch input.
 
-## v1.11.2 [unreleased]
+## v1.11.3 [unreleased]
+
+#### Bugfixes
+
+- [#6054](https://github.com/influxdata/telegraf/issues/6054): Fix unable to reconnect after vCenter reboot in vsphere input.
+- [#6073](https://github.com/influxdata/telegraf/issues/6073): Handle unknown error in nvidia-smi output.
+
+## v1.11.2 [2019-07-09]
 
 #### Bugfixes
 
 - [#6056](https://github.com/influxdata/telegraf/pull/6056): Fix source address ping flag on BSD.
 - [#6059](https://github.com/influxdata/telegraf/issues/6059): Fix value out of range error on 32-bit systems in bind input.
+- [#3573](https://github.com/influxdata/telegraf/issues/3573): Fix tail and logparser stop working after reload.
+- [#6077](https://github.com/influxdata/telegraf/pull/6077): Fix filecount path separator handling in Windows.
+- [#6075](https://github.com/influxdata/telegraf/issues/6075): Fix panic with empty datadog tag string.
+- [#6069](https://github.com/influxdata/telegraf/issues/6069): Apply topic filter to partition metrics in burrow input.
 
 ## v1.11.1 [2019-06-25]
 

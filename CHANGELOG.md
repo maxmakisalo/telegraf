@@ -3,6 +3,11 @@
 #### New Inputs
 
 - [azure_storage_queue](/plugins/inputs/azure_storage_queue/README.md) - Contributed by @mjiderhamn
+- [suricata](/plugins/inputs/suricata/README.md) - Contributed by @satta
+
+#### New Aggregators
+
+- [merge](/plugins/aggregators/merge/README.md) - Contributed by @influxdata
 
 #### Features
 
@@ -10,14 +15,24 @@
 - [#6361](https://github.com/influxdata/telegraf/pull/6361): Add ability to read query from file to postgresql_extensible input.
 - [#5921](https://github.com/influxdata/telegraf/pull/5921): Add replication metrics to the redis input.
 - [#6177](https://github.com/influxdata/telegraf/pull/6177): Support NX-OS telemetry extensions in cisco_telemetry_mdt.
+- [#6415](https://github.com/influxdata/telegraf/pull/6415): Allow graphite parser to create Inf and NaN values.
+- [#6434](https://github.com/influxdata/telegraf/pull/6434): Use prefix base detection for ints in grok parser.
 
-## v1.12.2 [unreleased]
+## v1.12.3 [unreleased]
+
+#### Bugfixes
+
+- [#6445](https://github.com/influxdata/telegraf/issues/6445): Use batch serialization format in exec output.
+
+## v1.12.2 [2019-09-24]
 
 #### Bugfixes
 
 - [#6386](https://github.com/influxdata/telegraf/issues/6386): Fix detection of layout timestamps in csv and json parser.
 - [#6394](https://github.com/influxdata/telegraf/issues/6394): Fix parsing of BATTDATE in apcupsd input.
 - [#6398](https://github.com/influxdata/telegraf/issues/6398): Keep boolean values listed in json_string_fields.
+- [#6393](https://github.com/influxdata/telegraf/issues/6393): Disable Go plugin support in official builds.
+- [#6391](https://github.com/influxdata/telegraf/issues/6391): Fix path handling issues in cisco_telemetry_gnmi.
 
 ## v1.12.1 [2019-09-10]
 

@@ -17,12 +17,16 @@
 - [#6177](https://github.com/influxdata/telegraf/pull/6177): Support NX-OS telemetry extensions in cisco_telemetry_mdt.
 - [#6415](https://github.com/influxdata/telegraf/pull/6415): Allow graphite parser to create Inf and NaN values.
 - [#6434](https://github.com/influxdata/telegraf/pull/6434): Use prefix base detection for ints in grok parser.
+- [#6465](https://github.com/influxdata/telegraf/pull/6465): Add more performance counter metrics to sqlserver input.
 
 ## v1.12.3 [unreleased]
 
 #### Bugfixes
 
 - [#6445](https://github.com/influxdata/telegraf/issues/6445): Use batch serialization format in exec output.
+- [#6455](https://github.com/influxdata/telegraf/issues/6455): Build official packages with Go 1.12.10.
+- [#6464](https://github.com/influxdata/telegraf/pull/6464): Use case insensitive serial numer match in smart input.
+- [#6469](https://github.com/influxdata/telegraf/pull/6469): Add auth header only when env var is set.
 
 ## v1.12.2 [2019-09-24]
 

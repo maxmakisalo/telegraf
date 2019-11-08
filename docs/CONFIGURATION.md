@@ -124,12 +124,12 @@ The agent table configures Telegraf and the defaults used across all plugins.
 
 - **flush_interval**:
   Default flushing [interval][] for all outputs. Maximum flush_interval will be
-  flush_interval + flush_jitter
+  flush_interval + flush_jitter.
 
 - **flush_jitter**:
   Jitter the flush [interval][] by a random amount. This is primarily to avoid
   large write spikes for users running a large number of telegraf instances.
-  ie, a jitter of 5s and interval 10s means flushes will happen every 10-15s
+  ie, a jitter of 5s and interval 10s means flushes will happen every 10-15s.
 
 - **precision**:
   Collected metrics are rounded to the precision specified as an [interval][].
@@ -257,6 +257,7 @@ databases, network services, and messaging systems.
 
 Parameters that can be used with any output plugin:
 
+- **alias**: Name an instance of a plugin.
 - **flush_interval**: The maximum time between flushes.  Use this setting to
   override the agent `flush_interval` on a per plugin basis.
 - **metric_batch_size**: The maximum number of metrics to send at once.  Use
@@ -294,6 +295,7 @@ input plugins and before any aggregator plugins.
 
 Parameters that can be used with any processor plugin:
 
+- **alias**: Name an instance of a plugin.
 - **order**: The order in which the processor(s) are executed. If this is not
   specified then processor execution order will be random.
 
@@ -328,6 +330,7 @@ processors have been applied.
 
 Parameters that can be used with any aggregator plugin:
 
+- **alias**: Name an instance of a plugin.
 - **period**: The period on which to flush & clear each aggregator. All
   metrics that are sent with timestamps outside of this period will be ignored
   by the aggregator.

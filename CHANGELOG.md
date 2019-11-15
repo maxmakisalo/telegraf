@@ -7,6 +7,7 @@
 #### New Inputs
 
 - [azure_storage_queue](/plugins/inputs/azure_storage_queue/README.md) - Contributed by @mjiderhamn
+- [ethtool](/plugins/inputs/ethtool/README.md) - Contributed by @philippreston
 - [suricata](/plugins/inputs/suricata/README.md) - Contributed by @satta
 
 #### New Processors
@@ -38,12 +39,17 @@
 - [#6283](https://github.com/influxdata/telegraf/pull/6283): Add gathering of RabbitMQ federation link metrics.
 - [#6356](https://github.com/influxdata/telegraf/pull/6356): Add bearer token defaults for Kubernetes plugins.
 - [#5870](https://github.com/influxdata/telegraf/pull/5870): Add support for SNMP over TCP.
+- [#6603](https://github.com/influxdata/telegraf/pull/6603): Add support for per output flush jitter.
+- [#6650](https://github.com/influxdata/telegraf/pull/6650): Add a nameable file tag to file input plugin.
 
 #### Bugfixes
 
 - [#6484](https://github.com/influxdata/telegraf/issues/6484): Show correct default settings in mysql sample config.
+- [#6583](https://github.com/influxdata/telegraf/issues/6583): Use 1h or 3h rain values as appropriate in openweathermap input.
+- [#6573](https://github.com/influxdata/telegraf/issues/6573): Fix not a valid field error in Windows with nvidia input.
+- [#6614](https://github.com/influxdata/telegraf/issues/6614): Fix influxdb output serialization on connection closed.
 
-## v1.12.5 [unreleased]
+## v1.12.5 [2019-11-12]
 
 #### Bugfixes
 
@@ -51,6 +57,11 @@
 - [#6610](https://github.com/influxdata/telegraf/pull/6610): Add missing character replacement to sql_instance tag.
 - [#6337](https://github.com/influxdata/telegraf/issues/6337): Change no metric error message to debug level in cloudwatch input.
 - [#6602](https://github.com/influxdata/telegraf/issues/6602): Add missing ServerProperties query to sqlserver input docs.
+- [#6643](https://github.com/influxdata/telegraf/pull/6643): Fix mongodb connections_total_created field loading.
+- [#6627](https://github.com/influxdata/telegraf/issues/6578): Fix metric creation when node is offline in jenkins input.
+- [#6649](https://github.com/influxdata/telegraf/issues/6615): Fix docker uptime_ns calculation when container has been restarted.
+- [#6647](https://github.com/influxdata/telegraf/issues/6646): Fix mysql field type conflict in conversion of gtid_mode to an integer.
+- [#5529](https://github.com/influxdata/telegraf/issues/5529): Fix mysql field type conflict with ssl_verify_depth and ssl_ctx_verify_depth.
 
 ## v1.12.4 [2019-10-23]
 

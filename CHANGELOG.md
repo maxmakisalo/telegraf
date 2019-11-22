@@ -9,6 +9,7 @@
 - [azure_storage_queue](/plugins/inputs/azure_storage_queue/README.md) - Contributed by @mjiderhamn
 - [ethtool](/plugins/inputs/ethtool/README.md) - Contributed by @philippreston
 - [suricata](/plugins/inputs/suricata/README.md) - Contributed by @satta
+- [synproxy](/plugins/inputs/synproxy/README.md) - Contributed by @rfrenayworldstream
 
 #### New Processors
 
@@ -41,6 +42,12 @@
 - [#5870](https://github.com/influxdata/telegraf/pull/5870): Add support for SNMP over TCP.
 - [#6603](https://github.com/influxdata/telegraf/pull/6603): Add support for per output flush jitter.
 - [#6650](https://github.com/influxdata/telegraf/pull/6650): Add a nameable file tag to file input plugin.
+- [#6640](https://github.com/influxdata/telegraf/pull/6640): Add Splunk MultiMetric support.
+- [#6680](https://github.com/influxdata/telegraf/pull/6668): Add support for sending HTTP Basic Auth in influxdb input
+- [#5767](https://github.com/influxdata/telegraf/pull/5767): Add ability to configure the url tag in the prometheus input.
+- [#5767](https://github.com/influxdata/telegraf/pull/5767): Add prometheus metric_version=2 mapping to internal metrics/line protocol.
+- [#6660](https://github.com/influxdata/telegraf/pull/6660): Add content_encoding compression support to socket_listener.
+- [#6689](https://github.com/influxdata/telegraf/pull/6689): Add high resolution metrics support to CloudWatch output.
 
 #### Bugfixes
 
@@ -48,6 +55,15 @@
 - [#6583](https://github.com/influxdata/telegraf/issues/6583): Use 1h or 3h rain values as appropriate in openweathermap input.
 - [#6573](https://github.com/influxdata/telegraf/issues/6573): Fix not a valid field error in Windows with nvidia input.
 - [#6614](https://github.com/influxdata/telegraf/issues/6614): Fix influxdb output serialization on connection closed.
+
+## v1.12.6 [2019-11-19]
+
+#### Bugfixes
+
+- [#6666](https://github.com/influxdata/telegraf/issues/6666): Fix many plugin errors are logged at debug logging level.
+- [#6652](https://github.com/influxdata/telegraf/issues/6652): Use nanosecond precision in docker_log input.
+- [#6642](https://github.com/influxdata/telegraf/issues/6642): Fix interface option with method = native in ping input.
+- [#6680](https://github.com/influxdata/telegraf/pull/6680): Fix panic in mongodb input if shard connection pool stats are unreadable.
 
 ## v1.12.5 [2019-11-12]
 

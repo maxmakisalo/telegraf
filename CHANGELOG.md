@@ -3,11 +3,17 @@
 #### Release Notes
 
 - Official packages built with Go 1.13.3.
+- The `prometheus` input and `prometheus_client` output have a new mapping to
+  and from Telegraf metrics, which can be enabled by setting `metric_version = 2`.
+  The original mapping is deprecated.  When both plugins have the same setting,
+  passthrough metrics will be unchanged.  Refer to the `prometheus` input for
+  details about the mapping.
 
 #### New Inputs
 
 - [azure_storage_queue](/plugins/inputs/azure_storage_queue/README.md) - Contributed by @mjiderhamn
 - [ethtool](/plugins/inputs/ethtool/README.md) - Contributed by @philippreston
+- [snmp_trap](/plugins/inputs/snmp_trap/README.md) - Contributed by @influxdata
 - [suricata](/plugins/inputs/suricata/README.md) - Contributed by @satta
 - [synproxy](/plugins/inputs/synproxy/README.md) - Contributed by @rfrenayworldstream
 
@@ -46,8 +52,14 @@
 - [#6680](https://github.com/influxdata/telegraf/pull/6668): Add support for sending HTTP Basic Auth in influxdb input
 - [#5767](https://github.com/influxdata/telegraf/pull/5767): Add ability to configure the url tag in the prometheus input.
 - [#5767](https://github.com/influxdata/telegraf/pull/5767): Add prometheus metric_version=2 mapping to internal metrics/line protocol.
+- [#6703](https://github.com/influxdata/telegraf/pull/6703): Add prometheus metric_version=2 support to prometheus_client output.
 - [#6660](https://github.com/influxdata/telegraf/pull/6660): Add content_encoding compression support to socket_listener.
 - [#6689](https://github.com/influxdata/telegraf/pull/6689): Add high resolution metrics support to CloudWatch output.
+- [#6716](https://github.com/influxdata/telegraf/pull/6716): Add SReclaimable and SUnreclaim to mem input.
+- [#6695](https://github.com/influxdata/telegraf/pull/6695): Allow multiple certificates per file in x509_cert input.
+- [#6686](https://github.com/influxdata/telegraf/pull/6686): Add additional tags to the x509 input.
+- [#6703](https://github.com/influxdata/telegraf/pull/6703): Add batch data format support to file output.
+- [#6688](https://github.com/influxdata/telegraf/pull/6688): Support partition assignement strategy configuration in kafka_consumer.
 
 #### Bugfixes
 

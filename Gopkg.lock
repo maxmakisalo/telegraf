@@ -100,12 +100,12 @@
   version = "v0.4.9"
 
 [[projects]]
-  digest = "1:322bf7f4bb312294fc551f6e2c82d02f2ab8f94920f4163b3deeb07a8141ac79"
+  digest = "1:33f56caa9ab45fedc63d3d1d3e342d9f9d00726071f22c67d06b0cd26d49a55e"
   name = "github.com/Shopify/sarama"
   packages = ["."]
   pruneopts = ""
-  revision = "b12709e6ca29240128c89fe0b30b6a76be42b457"
-  source = "https://github.com/influxdata/sarama.git"
+  revision = ""
+  version = "v1.24.1"
 
 [[projects]]
   digest = "1:f82b8ac36058904227087141017bb82f4b0fc58272990a4cdae3e2d6d222644e"
@@ -525,12 +525,12 @@
   version = "v1.1.1"
 
 [[projects]]
-  digest = "1:530233672f656641b365f8efb38ed9fba80e420baff2ce87633813ab3755ed6d"
+  digest = "1:68c64bb61d55dcd17c82ca0b871ddddb5ae18b30cfe26f6bfd4b6df6287dc2e0"
   name = "github.com/golang/mock"
   packages = ["gomock"]
   pruneopts = ""
-  revision = "51421b967af1f557f93a59e0057aaf15ca02e29c"
-  version = "v1.2.0"
+  revision = "9fa652df1129bef0e734c9cf9bf6dbae9ef3b9fa"
+  version = "1.3.1"
 
 [[projects]]
   digest = "1:f958a1c137db276e52f0b50efee41a1a389dcdded59a69711f3e872757dab34b"
@@ -790,6 +790,20 @@
   packages = ["."]
   pruneopts = ""
   revision = "95032a82bc518f77982ea72343cc1ade730072f0"
+
+[[projects]]
+  digest = "1:4ceab6231efd01210f2b8b6ab360d480d49c0f44df63841ca0465920a387495d"
+  name = "github.com/klauspost/compress"
+  packages = [
+    "fse",
+    "huff0",
+    "snappy",
+    "zstd",
+    "zstd/internal/xxhash",
+  ]
+  pruneopts = ""
+  revision = "4e96aec082898e4dad17d8aca1a7e2d01362ff6c"
+  version = "v1.9.2"
 
 [[projects]]
   branch = "master"
@@ -1750,6 +1764,7 @@
     "github.com/go-sql-driver/mysql",
     "github.com/gobwas/glob",
     "github.com/gofrs/uuid",
+    "github.com/gogo/protobuf/proto",
     "github.com/golang/protobuf/proto",
     "github.com/golang/protobuf/ptypes/duration",
     "github.com/golang/protobuf/ptypes/empty",

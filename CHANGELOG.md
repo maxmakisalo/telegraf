@@ -5,12 +5,15 @@
 - [#6730](https://github.com/influxdata/telegraf/pull/6730): Add page_faults for mongodb wired tiger.
 - [#6798](https://github.com/influxdata/telegraf/pull/6798): Add use_sudo option to ipmi_sensor input.
 - [#6764](https://github.com/influxdata/telegraf/pull/6764): Add ability to collect pod labels to kubernetes input.
+- [#6770](https://github.com/influxdata/telegraf/pull/6770): Expose unbound-control config file option.
+- [#6508](https://github.com/influxdata/telegraf/pull/6508):  Add support for new nginx plus api endpoints.
 
 ## v1.13.1 [unreleased]
 
 #### Bugfixes
 
 - [#6788](https://github.com/influxdata/telegraf/issues/6788): Fix ServerProperty query stops working on Azure after failover.
+- [#6803](https://github.com/influxdata/telegraf/pull/6803): Add leading period to OID in SNMP v1 generic traps
 
 ## v1.13 [2019-12-12]
 

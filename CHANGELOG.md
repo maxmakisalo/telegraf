@@ -6,6 +6,13 @@
   renamed to `sqlserver_azure_db_resource_stats` due to an issue where numeric
   metrics were previously being reported incorrectly as strings.
 
+- The `date` processor now uses the UTC timezone when creating its tag.  In
+  previous versions the local time was used.
+
+#### New Inputs
+
+- [infiniband](/plugins/inputs/infiniband/README.md) - Contributed by @willfurnell
+
 #### New Outputs
 
 - [warp10](/plugins/outputs/warp10/README.md) - Contributed by @aurrelhebert
@@ -23,11 +30,24 @@
 - [#6869](https://github.com/influxdata/telegraf/pull/6869): Calculate DB Name instead of GUID in physical_db_name in the sqlserver input.
 - [#6733](https://github.com/influxdata/telegraf/pull/6733): Add latency stats to mongo input.
 - [#6844](https://github.com/influxdata/telegraf/pull/6844): Add source and port tags to jenkins_job metrics.
+- [#6886](https://github.com/influxdata/telegraf/pull/6886): Add date offset and timezone options to date processor.
+- [#6859](https://github.com/influxdata/telegraf/pull/6859): Exclude resources by inventory path in vsphere input.
 
 #### Bugfixes
 
 - [#6397](https://github.com/influxdata/telegraf/issues/6397): Fix conversion to floats in AzureDBResourceStats query in the sqlserver input.
 - [#6867](https://github.com/influxdata/telegraf/issues/6867): Fix case sensitive collation in sqlserver input.
+
+## v1.13.2 [unreleased]
+
+#### Bugfixes
+
+- [#2652](https://github.com/influxdata/telegraf/issues/2652): Warn without error when processes input is started on Windows.
+- [#6890](https://github.com/influxdata/telegraf/issues/6890): Only parse certificate blocks in x509_cert input.
+- [#6883](https://github.com/influxdata/telegraf/issues/6883): Add custom attributes for all resource types in vsphere input.
+- [#6899](https://github.com/influxdata/telegraf/pull/6899): Fix URL agent address form with udp in snmp input.
+- [#6619](https://github.com/influxdata/telegraf/issues/6619): Change logic to allow recording of device fields when attributes is false.
+- [#6903](https://github.com/influxdata/telegraf/issues/6903): Do not add invalid timestamps to kafka messages.
 
 ## v1.13.1 [2020-01-08]
 

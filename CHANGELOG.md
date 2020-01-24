@@ -12,6 +12,7 @@
 #### New Inputs
 
 - [infiniband](/plugins/inputs/infiniband/README.md) - Contributed by @willfurnell
+- [monit](/plugins/inputs/monit/README.md) - Contributed by @SirishaGopigiri
 
 #### New Outputs
 
@@ -32,13 +33,17 @@
 - [#6844](https://github.com/influxdata/telegraf/pull/6844): Add source and port tags to jenkins_job metrics.
 - [#6886](https://github.com/influxdata/telegraf/pull/6886): Add date offset and timezone options to date processor.
 - [#6859](https://github.com/influxdata/telegraf/pull/6859): Exclude resources by inventory path in vsphere input.
+- [#6700](https://github.com/influxdata/telegraf/pull/6700): Allow a user defined field to be used as the graylog short_message.
+- [#6917](https://github.com/influxdata/telegraf/pull/6917): Add server_name override for x509_cert plugin.
+- [#6921](https://github.com/influxdata/telegraf/pull/6921): Add udp internal metrics for the statsd input.
+- [#6914](https://github.com/influxdata/telegraf/pull/6914): Add replica set tag to mongodb input.
 
 #### Bugfixes
 
 - [#6397](https://github.com/influxdata/telegraf/issues/6397): Fix conversion to floats in AzureDBResourceStats query in the sqlserver input.
 - [#6867](https://github.com/influxdata/telegraf/issues/6867): Fix case sensitive collation in sqlserver input.
 
-## v1.13.2 [unreleased]
+## v1.13.2 [2020-01-21]
 
 #### Bugfixes
 
@@ -48,6 +53,8 @@
 - [#6899](https://github.com/influxdata/telegraf/pull/6899): Fix URL agent address form with udp in snmp input.
 - [#6619](https://github.com/influxdata/telegraf/issues/6619): Change logic to allow recording of device fields when attributes is false.
 - [#6903](https://github.com/influxdata/telegraf/issues/6903): Do not add invalid timestamps to kafka messages.
+- [#6906](https://github.com/influxdata/telegraf/issues/6906): Fix json_strict option and set default of true.
+- [#5744](https://github.com/influxdata/telegraf/issues/5744): Fix kibana input with Kibana versions greater than 6.4.
 
 ## v1.13.1 [2020-01-08]
 

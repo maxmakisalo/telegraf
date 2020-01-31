@@ -12,6 +12,7 @@
 #### New Inputs
 
 - [infiniband](/plugins/inputs/infiniband/README.md) - Contributed by @willfurnell
+- [modbus](/plugins/inputs/modbus/README.md) - Contributed by @garciaolais
 - [monit](/plugins/inputs/monit/README.md) - Contributed by @SirishaGopigiri
 
 #### New Outputs
@@ -37,6 +38,7 @@
 - [#6917](https://github.com/influxdata/telegraf/pull/6917): Add server_name override for x509_cert plugin.
 - [#6921](https://github.com/influxdata/telegraf/pull/6921): Add udp internal metrics for the statsd input.
 - [#6914](https://github.com/influxdata/telegraf/pull/6914): Add replica set tag to mongodb input.
+- [#6935](https://github.com/influxdata/telegraf/pull/6935): Add counters for merged reads and writes to diskio input.
 
 #### Bugfixes
 

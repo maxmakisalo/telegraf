@@ -44,11 +44,20 @@
 - [#6914](https://github.com/influxdata/telegraf/pull/6914): Add replica set tag to mongodb input.
 - [#6935](https://github.com/influxdata/telegraf/pull/6935): Add counters for merged reads and writes to diskio input.
 - [#6982](https://github.com/influxdata/telegraf/pull/6982): Add support for titlecase transformation to strings processor.
+- [#6993](https://github.com/influxdata/telegraf/pull/6993): Add support for MDB database information to openldap input.
 
 #### Bugfixes
 
 - [#6397](https://github.com/influxdata/telegraf/issues/6397): Fix conversion to floats in AzureDBResourceStats query in the sqlserver input.
 - [#6867](https://github.com/influxdata/telegraf/issues/6867): Fix case sensitive collation in sqlserver input.
+- [#7005](https://github.com/influxdata/telegraf/pull/7005): Search for chronyc only when chrony input plugin is enabled.
+
+## v1.13.4 [unreleased]
+
+#### Bugfixes
+
+- [#6988](https://github.com/influxdata/telegraf/issues/6988): Parse NaN values from summary types in prometheus input.
+- [#6820](https://github.com/influxdata/telegraf/issues/6820): Fix pgbouncer input when used with newer pgbouncer versions.
 
 ## v1.13.3 [2020-02-04]
 
@@ -90,7 +99,10 @@
 
 #### Release Notes
 
-- Official packages built with Go 1.13.5.
+- Official packages built with Go 1.13.5.  This affects the minimum supported
+  version on several platforms, most notably requiring Windows 7 (2008 R2) or
+  later.  For details, check the release notes for Go
+  [ports](https://golang.org/doc/go1.13#ports).
 - The `prometheus` input and `prometheus_client` output have a new mapping to
   and from Telegraf metrics, which can be enabled by setting `metric_version = 2`.
   The original mapping is deprecated.  When both plugins have the same setting,

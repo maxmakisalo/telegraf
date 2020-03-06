@@ -11,6 +11,8 @@
 
 #### New Inputs
 
+- [clickhouse](/plugins/inputs/clickhouse/README.md) - Contributed by @kshvakov
+- [execd](/plugins/inputs/execd/README.md) - Contributed by @jgraichen
 - [infiniband](/plugins/inputs/infiniband/README.md) - Contributed by @willfurnell
 - [modbus](/plugins/inputs/modbus/README.md) - Contributed by @garciaolais
 - [monit](/plugins/inputs/monit/README.md) - Contributed by @SirishaGopigiri
@@ -51,12 +53,17 @@
 - [#7022](https://github.com/influxdata/telegraf/pull/7022): Add support for credentials file to nats_consumer and nats output.
 - [#7065](https://github.com/influxdata/telegraf/pull/7065): Add additional tags and fields to apcupsd.
 - [#7084](https://github.com/influxdata/telegraf/pull/7084): Add RabbitMQ slave_nodes and synchronized_slave_nodes metrics.
+- [#7089](https://github.com/influxdata/telegraf/pull/7089): Allow globs in FPM unix socket paths.
+- [#7071](https://github.com/influxdata/telegraf/pull/7071): Add non-cumulative histogram to histogram aggregator.
+- [#6969](https://github.com/influxdata/telegraf/pull/6969): Add label and field selectors to prometheus input k8s discovery.
 
 #### Bugfixes
 
 - [#6397](https://github.com/influxdata/telegraf/issues/6397): Fix conversion to floats in AzureDBResourceStats query in the sqlserver input.
 - [#6867](https://github.com/influxdata/telegraf/issues/6867): Fix case sensitive collation in sqlserver input.
 - [#7005](https://github.com/influxdata/telegraf/pull/7005): Search for chronyc only when chrony input plugin is enabled.
+- [#2280](https://github.com/influxdata/telegraf/issues/2280): Fix request to InfluxDB Listener failing with EOF.
+- [#6124](https://github.com/influxdata/telegraf/issues/6124): Fix InfluxDB listener to continue parsing after error.
 
 ## v1.13.4 [2020-02-25]
 

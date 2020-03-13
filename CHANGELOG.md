@@ -14,12 +14,15 @@
 - [clickhouse](/plugins/inputs/clickhouse/README.md) - Contributed by @kshvakov
 - [execd](/plugins/inputs/execd/README.md) - Contributed by @jgraichen
 - [infiniband](/plugins/inputs/infiniband/README.md) - Contributed by @willfurnell
+- [lanz](/plugins/inputs/lanz/README.md): Contributed by @timhughes
 - [modbus](/plugins/inputs/modbus/README.md) - Contributed by @garciaolais
 - [monit](/plugins/inputs/monit/README.md) - Contributed by @SirishaGopigiri
+- [wireguard](/plugins/inputs/wireguard/README.md) - Contributed by @LINKIWI
 
 #### New Processors
 
 - [template](/plugins/processors/template/README.md) - Contributed by @RobMalvern
+- [s2_geo](/plugins/processors/s2_geo/README.md) - Contributed by @alespour
 
 #### New Outputs
 
@@ -56,6 +59,10 @@
 - [#7089](https://github.com/influxdata/telegraf/pull/7089): Allow globs in FPM unix socket paths.
 - [#7071](https://github.com/influxdata/telegraf/pull/7071): Add non-cumulative histogram to histogram aggregator.
 - [#6969](https://github.com/influxdata/telegraf/pull/6969): Add label and field selectors to prometheus input k8s discovery.
+- [#7049](https://github.com/influxdata/telegraf/pull/7049): Add support for converting tag or field to measurement in converter processor.
+- [#7103](https://github.com/influxdata/telegraf/pull/7103): Add volume_mount_point to DatabaseIO query in sqlserver input.
+- [#7142](https://github.com/influxdata/telegraf/pull/7142): Add topic tag options to kafka output.
+- [#7141](https://github.com/influxdata/telegraf/pull/7141): Add support for setting InfluxDB retention policy using tag.
 
 #### Bugfixes
 
@@ -64,6 +71,9 @@
 - [#7005](https://github.com/influxdata/telegraf/pull/7005): Search for chronyc only when chrony input plugin is enabled.
 - [#2280](https://github.com/influxdata/telegraf/issues/2280): Fix request to InfluxDB Listener failing with EOF.
 - [#6124](https://github.com/influxdata/telegraf/issues/6124): Fix InfluxDB listener to continue parsing after error.
+- [#7133](https://github.com/influxdata/telegraf/issues/7133): Fix log rotation to use actual file size instead of bytes written.
+- [#7103](https://github.com/influxdata/telegraf/pull/7103): Fix several issues with DatabaseIO query in sqlserver input.
+- [#7119](https://github.com/influxdata/telegraf/pull/7119): Fix internal metrics for output split into multiple lines.
 
 ## v1.13.4 [2020-02-25]
 

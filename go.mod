@@ -18,6 +18,8 @@ require (
 	github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf
 	github.com/amir/raidman v0.0.0-20170415203553-1ccc43bfb9c9
 	github.com/apache/thrift v0.12.0
+	github.com/aristanetworks/glog v0.0.0-20191112221043-67e8567f59f3 // indirect
+	github.com/aristanetworks/goarista v0.0.0-20190325233358-a123909ec740
 	github.com/armon/go-metrics v0.3.0 // indirect
 	github.com/aws/aws-sdk-go v1.19.41
 	github.com/bitly/go-hostpool v0.1.0 // indirect
@@ -39,7 +41,7 @@ require (
 	github.com/eclipse/paho.mqtt.golang v1.2.0
 	github.com/ericchiang/k8s v1.2.0
 	github.com/ghodss/yaml v1.0.1-0.20190212211648-25d852aebe32
-	github.com/glinton/ping v0.1.3
+	github.com/glinton/ping v0.1.4-0.20200311211934-5ac87da8cd96
 	github.com/go-logfmt/logfmt v0.4.0
 	github.com/go-ole/go-ole v1.2.1 // indirect
 	github.com/go-redis/redis v6.12.0+incompatible
@@ -49,9 +51,10 @@ require (
 	github.com/gobwas/glob v0.2.3
 	github.com/gofrs/uuid v2.1.0+incompatible
 	github.com/gogo/protobuf v1.2.2-0.20190723190241-65acae22fc9d
+	github.com/golang/geo v0.0.0-20190916061304-5b978397cfec
 	github.com/golang/mock v1.3.1-0.20190508161146-9fa652df1129 // indirect
 	github.com/golang/protobuf v1.3.2
-	github.com/google/go-cmp v0.3.0
+	github.com/google/go-cmp v0.4.0
 	github.com/google/go-github v17.0.0+incompatible
 	github.com/google/go-querystring v1.0.0 // indirect
 	github.com/gorilla/mux v1.6.2
@@ -122,6 +125,7 @@ require (
 	golang.org/x/net v0.0.0-20200202094626-16171245cfb2
 	golang.org/x/oauth2 v0.0.0-20190226205417-e64efc72b421
 	golang.org/x/sys v0.0.0-20200212091648-12a6c2dcc1e4
+	golang.zx2c4.com/wireguard/wgctrl v0.0.0-20200205215550-e35592f146e4
 	gonum.org/v1/gonum v0.6.2 // indirect
 	google.golang.org/api v0.3.1
 	google.golang.org/genproto v0.0.0-20190404172233-64821d5d2107
@@ -136,3 +140,6 @@ require (
 	gotest.tools v2.2.0+incompatible // indirect
 	k8s.io/apimachinery v0.17.1
 )
+
+// replaced due to https://github.com/satori/go.uuid/issues/73
+replace github.com/satori/go.uuid => github.com/gofrs/uuid v3.2.0+incompatible

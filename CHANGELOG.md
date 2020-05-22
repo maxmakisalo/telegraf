@@ -37,6 +37,8 @@
 - [#7321](https://github.com/influxdata/telegraf/pull/7321): Add additional fields to mongodb input.
 - [#7491](https://github.com/influxdata/telegraf/pull/7491): Add authentication support to the http_response input plugin.
 - [#7503](https://github.com/influxdata/telegraf/pull/7503): Add truncate_tags setting to wavefront output.
+- [#7545](https://github.com/influxdata/telegraf/pull/7545): Add configurable separator graphite serializer and output.
+- [#7489](https://github.com/influxdata/telegraf/pull/7489): Add cluster state integer to mongodb input.
 
 #### Bugfixes
 
@@ -46,12 +48,20 @@
 - [#7446](https://github.com/influxdata/telegraf/issues/7446): Fix gzip support in socket_listener with tcp sockets.
 - [#7390](https://github.com/influxdata/telegraf/issues/7390): Fix interval drift when round_interval is set in agent.
 
-## v1.14.3 [unreleased]
+## v1.14.4 [unreleased]
+
+#### Bugfixes
+
+- [#7325](https://github.com/influxdata/telegraf/issues/7325): Fix "cannot insert the value NULL error" with PerformanceCounters query.
+
+## v1.14.3 [2020-05-19]
 
 #### Bugfixes
 
 - [#7412](https://github.com/influxdata/telegraf/pull/7412): Use same timestamp for all objects in arrays in the json parser.
-- [#7439](https://github.com/influxdata/telegraf/pull/7439): Handle multiple metrics with the same timestamp in dedup processor.
+- [#7343](https://github.com/influxdata/telegraf/issues/7343): Handle multiple metrics with the same timestamp in dedup processor.
+- [#5905](https://github.com/influxdata/telegraf/issues/5905): Fix reconnection of timed out HTTP2 connections influxdb outputs.
+- [#7468](https://github.com/influxdata/telegraf/issues/7468): Fix negative value parsing in impi_sensor input.
 
 ## v1.14.2 [2020-04-28]
 

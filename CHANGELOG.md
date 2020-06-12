@@ -25,6 +25,7 @@
 
 #### Features
 
+- [#7634](https://github.com/influxdata/telegraf/pull/7634): Add support for streaming processors.
 - [#6905](https://github.com/influxdata/telegraf/pull/6905): Add commands stats to mongodb input plugin.
 - [#7193](https://github.com/influxdata/telegraf/pull/7193): Add additional concurrent transaction information.
 - [#7223](https://github.com/influxdata/telegraf/pull/7223): Add ability to specify HTTP Headers in http_listener_v2 which will added as tags.
@@ -55,6 +56,11 @@
 - [#7540](https://github.com/influxdata/telegraf/pull/7540): Add processor to look up service name by port.
 - [#7474](https://github.com/influxdata/telegraf/pull/7474): Add new once mode that write to outputs and exits.
 - [#7474](https://github.com/influxdata/telegraf/pull/7474): Run processors and aggregators during test mode.
+- [#7294](https://github.com/influxdata/telegraf/pull/7294): Add SNMPv3 trap support to snmp_trap input.
+- [#7646](https://github.com/influxdata/telegraf/pull/7646): Add video codec stats to nvidia-smi.
+- [#7651](https://github.com/influxdata/telegraf/pull/7651): Fix source field for icinga2 plugin and add tag for server hostname.
+- [#7619](https://github.com/influxdata/telegraf/pull/7619): Add timezone configuration to csv input data format.
+- [#7596](https://github.com/influxdata/telegraf/pull/7596): Add ability to collect response body as field with http_response.
 
 #### Bugfixes
 
@@ -65,14 +71,17 @@
 - [#7390](https://github.com/influxdata/telegraf/issues/7390): Fix interval drift when round_interval is set in agent.
 - [#7524](https://github.com/influxdata/telegraf/pull/7524): Fix typo in total_elapsed_time_ms field of sqlserver input.
 - [#7203](https://github.com/influxdata/telegraf/issues/7203): Exclude csv_timestamp_column and csv_measurement_column from fields.
+- [#7018](https://github.com/influxdata/telegraf/issues/7018): Fix incorrect uptime when clock is adjusted.
+- [#6807](https://github.com/influxdata/telegraf/issues/6807): Fix memory leak when using procstat on Windows.
 
-## v1.14.4 [unreleased]
+## v1.14.4 [2020-06-09]
 
 #### Bugfixes
 
 - [#7325](https://github.com/influxdata/telegraf/issues/7325): Fix "cannot insert the value NULL error" with PerformanceCounters query.
 - [#7579](https://github.com/influxdata/telegraf/pull/7579): Fix numeric to bool conversion in converter processor.
 - [#7551](https://github.com/influxdata/telegraf/issues/7551): Fix typo in name of gc_cpu_fraction field of the influxdb input.
+- [#7617](https://github.com/influxdata/telegraf/issues/7617): Fix issue with influx stream parser blocking when data is in buffer.
 
 ## v1.14.3 [2020-05-19]
 

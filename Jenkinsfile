@@ -13,7 +13,7 @@ properties(
 
 pipeline
 {
-	agent { node { label 'linux && stretch' } }
+	agent { node { label 'linux && go' } }
 	
 	stages
 	{
